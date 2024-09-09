@@ -1,0 +1,1421 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: hsl(180, 100%, 50%);
+    --secondary-color: rgba(31, 37, 90, 0.24);
+    --background-color: #041946f5;
+    --text-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h3 {
+    font-size: 90px;
+}
+
+h4 {
+    font-size: 50px;
+}
+
+/* MENU */
+
+.contenedor-header {
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+        url(img/7.jpg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: hwb(165 92% 7%);
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    font-style: italic; /* Añadido para mostrar en cursiva */
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: hsla(209, 82%, 48%, 0.459);
+}
+
+.nav-responsive {
+    display: none; /* Asegúrate de que el menú de hamburguesa no se muestre */
+}
+
+/* SECCION I N I C I O */
+.inicio {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura de la ventana para centrar verticalmente */
+    background-image: url('img/7.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajustar la imagen de fondo */
+    background-position: center; /* Centrar la imagen de fondo */
+    text-align: center; /* Alinear el texto al centro */
+    
+}
+.tarjeta {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+    perspective: 1000px;
+  
+}
+.contenido-inicio {
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px; /* Espacio alrededor del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+
+}
+.contenido-banner.back {
+    position: relative;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*descarga cv*/
+
+.btn-circular {
+    position: relative;
+    width: 100px; /* Ancho del botón */
+    height: 100px; /* Alto del botón para hacerlo circular */
+    border-radius: 50%; /* Hace que el botón sea un círculo */
+    background-color: #333; /* Color de fondo inicial */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Tamaño de fuente */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar por encima */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animación de transición */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.btn-circular .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Color de fondo del overlay */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-circular:hover .overlay {
+    opacity: 1; /* Muestra el overlay al hacer hover */
+}
+
+.btn-circular:hover {
+    background-color: rgba(3, 21, 61, 0.842); /* Cambia el color de fondo a blanco */
+    color: hsl(240, 40%, 98%); /* Cambia el color del texto al original del fondo */
+}
+.espejo {
+    transform: scaleY(-1); /* Efecto espejo */
+    position: relative;
+    margin-top: 20px; /* Espacio entre el contenido original y el espejo */
+    opacity: 0.5; /* Hacer el espejo semitransparente */
+    pointer-events: none; /* Desactivar la interacción con el espejo */
+}
+
+.contenido-banner {
+    padding: 20px;
+    color: #fff;
+    background-color: hsla(205, 74%, 10%, 0.308);
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    border-radius: 40px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tarjeta:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.tarjeta:hover .back {
+    transform: rotateY(0deg);
+}
+
+.contenido-banner img {
+    margin-top: 40px;
+    border: 5px solid #0419465d;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.contenido-banner h1 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: 'Righteous';
+}
+
+.contenido-banner h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contenido-banner p {
+    font-size: 16px;
+}
+
+.redes a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #00050f94;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.redes a:hover {
+    background-color: #072a77;
+}
+.sobremi{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:  #041946f5;
+    color: hwb(75 96% 1% / 0.986);
+    padding: 50px 20px;
+    
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: hsl(0, 0%, 98%);
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: hsla(240, 100%, 100%, 0.904);
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #0821579d;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #072a77;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #072a77;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:  #072a77;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+
+/*habilidades*/
+.habili2 {
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
+    color: #fff;
+    padding: 20px;
+    border: 1px solid #00aaff; /* Borde azul */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para dar profundidad */
+    max-width: 600px; /* Ancho máximo del rectángulo */
+    margin: auto; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+.habili2 h2 {
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+    color: hsl(180, 20%, 99%);
+}
+
+.habili2 ul {
+    list-style-type: none; /* Quitar los puntos de la lista */
+    padding-left: 0; /* Eliminar el padding del lado izquierdo */
+    text-align: center; /* Centrar los elementos de la lista */
+}
+
+.habili2 li {
+    color: #00aaff; /* Cambiar el color del texto a azul */
+    margin-bottom: 10px; /* Añadir un margen entre los elementos */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre los elementos */
+    transition: color 0.3s ease; /* Animación suave al cambiar de color */
+}
+
+.habili2 li:hover {
+    color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
+}
+
+
+/* SECCION S K I L L S */
+.skills-tools ul {
+    list-style-type: none; /* Quitar los puntos de la lista */
+    padding-left: 0; /* Eliminar el padding del lado izquierdo */
+    text-align: center; /* Centrar los elementos de la lista */
+}
+
+.skills-tools li {
+    color: #00aaff; /* Cambiar el color del texto a azul */
+    margin-bottom: 10px; /* Añadir un margen entre los elementos */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre los elementos */
+    transition: color 0.3s ease; /* Animación suave al cambiar de color */
+}
+.skills h2, .tools h2 {
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+  
+    
+}
+.skills-tools li:hover {
+    color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
+}
+.skills{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:   #072a77;
+
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills-tools {
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:   #072a77;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); /* Fondo semi-transparente */
+    gap: 20px; 
+}
+
+.skills, .tools {
+    width: 40%;
+    background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border: 1px solid #00aaff;
+    border-radius: 10px;
+}
+
+.skills h2, .tools h2 {
+  
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+    color: #f6fcff;
+    display: flex;
+    align-items: center;
+}
+.tools{  background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:   #072a77;
+    color: #fff;
+    padding: 50px 20px;
+
+}
+
+/*CREDENCUIALES*/
+.creden {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    display: flex;
+    align-items: column;
+}  
+.creden-container {
+    display: flex;
+    flex-direction:center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /* Esto ayuda a crear el efecto 3D */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    background-color: rgba(0, 0, 0, 0.5);  /* Color de fondo para la parte delantera */
+    color: #fff;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #01062286; /* Color de fondo para la parte trasera */
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.portfolio {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.modern-button {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #053058, #062acc7a);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.modern-button:hover {
+    background: linear-gradient(45deg, #052aa3c9, #040c52);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: translateY(-3px);
+}
+
+.modern-button:active {
+    background: linear-gradient(45deg, #008bcc, #020c64);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(11, 93, 201, 0.795);
+    transform: translateY(2px);
+}
+
+.modern-button i {
+    margin-left: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-25deg);
+    transition: left 0.3s ease;
+}
+
+.modern-button:hover .overlay {
+    left: 150%;
+}
+.download-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px #2980b9; /* Sombra para el efecto 3D */
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #2e9acc;
+    box-shadow: 0 6px #1039aa;
+    transform: translateY(-2px); /* Mueve el botón hacia arriba al hacer hover */
+}
+
+.download-button:active {
+    background-color: #3072ec;
+    box-shadow: 0 2px #07176d;
+    transform: translateY(2px); /* Mueve el botón hacia abajo al hacer clic */
+}
+
+.download-button i {
+    margin-left: 8px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none; /* Para que no interfiera con el hover */
+    transition: opacity 0.3s ease;
+}
+
+.download-button:hover .overlay {
+    opacity: 0;
+}
+
+.field {
+    margin-bottom: 10px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    padding: 6px 20px;
+    font-size: 14px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none
+  }
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(0%); }
+    38% { transform: translateX(-100%); }
+    71% { transform: translateX(-100%); }
+    76% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+.skills .skill .wordpress{
+    width: 0%;
+    animation: 2s wordpress forwards;
+}
+@keyframes wordpress {
+    0%{width: 0%;}
+    100%{width: 81%;}
+}
+
+.skills .skill .drupal{
+    width: 0%;
+    animation: 2s drupal forwards;
+}
+@keyframes drupal {
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width: 0%;}
+    100%{width: 99%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.skills .skill .proyect{
+    width: 0%;
+    animation: 2s proyect forwards;
+}
+@keyframes proyect {
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+/* SECCION CURRICULUM */
+.curriculum{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:  #041946f5;
+   
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid  #072a77;
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid  #072a77;
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color:  #072a77;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color:  #072a77;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color:  #072a77;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid  #072a77;
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid  #072a77;
+    margin-left: 20px;
+}
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: #072a77;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #072a77 ;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: #072a77;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color:  #072a77;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+
+
+/* SECCION PORTFOLIO */
+.view-more {
+    background-color: #2196F3; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.view-more:hover {
+    background-color: #0b7dda;
+}
+.portfolio {
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color: #041946f5;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estilo del contenido de la sección */
+.contenido-seccion h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los videos en horizontal */
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo de cada video item */
+.video-item {
+    position: relative;
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones de control del video */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Estilo de los botones de control */
+.play, .stop {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.play {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+}
+
+.stop {
+    background-color: #f44336; /* Rojo */
+    color: #fff;
+}
+
+/* Estilo de los modales */
+.modal {
+    display: none; /* Ocultos por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo de la descripción de cada video */
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Estilo de la sección de contacto */
+
+/* SECCION CONTACTO */
+.contacto{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:  #041946f5;
+    color: #fff;
+    padding: 50px 0;
+}
+.contact-form {
+    background-color: rgba(2, 35, 54, 0.288);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.contact-form h3 {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .btn-submit {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.download2-button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #eeeef39d;
+    background: linear-gradient(145deg, #021235, #0c4396);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(3, 27, 104, 0.1);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download2-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(2, 9, 107, 0.1);
+}
+
+.download2-button i {
+    margin-left: 10px;
+}
+
+.download2-button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.download2-button:hover .overlay {
+    opacity: 1;
+}
+#button {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #04346b, #04055073);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.3) inset;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button::before {
+  /* Código de FontAwesome para el icono de la carta */
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    margin-right: 10px;
+    transition: transform 0.4s ease;
+}
+
+#button:hover::before {
+    transform: translateX(5px);
+}
+
+#button:hover {
+    background: linear-gradient(45deg, #031b5f, #0925708f);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(8, 178, 245, 0.5) inset;
+    transform: translateY(-4px) scale(1.05);
+}
+
+#button:active {
+    background: linear-gradient(45deg, #0b46eb, #05064198);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.2) inset;
+    transform: translateY(2px) scale(0.98);
+}
+
+#button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+#button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BOTON DE LINCK*/
+
+.corazon-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 120px;
+    height: 100px;
+    background-color: red; /* Color del corazón */
+    border-radius: 50px 50px 0 0; /* Hace las esquinas redondeadas para el corazón */
+    transform: rotate(-45deg); /* Rotamos para crear la forma de corazón */
+    margin: 50px;
+    cursor: pointer;
+    text-decoration: none; /* Elimina subrayado del enlace */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Estilos para la parte inferior del corazón */
+.boton-estilizado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #007BFF; 
+}
+
+/* Estilo del ícono */
+.boton-estilizado i {
+    margin-left: 8px; 
+    font-size: 10px;
+}
+
+
+.boton-estilizado:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+
+
+
+/*BONTON WASAPP*/
+.whatsapp-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #25D366;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.whatsapp-link i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.whatsapp-link:hover {
+    color: #128C7E;
+}
+footer{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:  #041946f5;
+  
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #073161;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    
+}
+.modal{
+    background-color: #021935;
+ color :hwb(240 5% 94%);
+}
+
+
+
+.modal {
+ 
+    display: none; /* Escondemos el modal por defecto */
+    position: fixed; /* Fijamos la posición del modal en la pantalla */
+    z-index: 1; /* Aseguramos que esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Llenamos el ancho de la pantalla */
+    height: 100%; /* Llenamos el alto de la pantalla */
+    overflow: auto; /* Agregamos scroll si el contenido es mayor al alto de la pantalla */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content {
+    background-color: hwb(240 1% 94%); /* Fondo blanco */
+    margin: 5% auto; /* Centrado verticalmente y horizontalmente */
+    padding: 20px; /* Espacio interno */
+    border: 1px solid #0d1b9c8c; /* Borde gris */
+    color: hsl(210, 100%, 98%);
+    width: 800%; /* Cambia el ancho para hacerlo más pequeño */
+    max-width: 500px; /* Máximo ancho del modal */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Estilo para el botón de cierre */
+  .close {
+    color: hsl(0, 93%, 49%); /* Color del botón */
+    float: right; /* Flotamos el botón a la derecha */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black; /* Cambia el color cuando se pasa el cursor o se enfoca */
+    text-decoration: none; /* Quitamos subrayado */
+    cursor: pointer; /* Cambiamos el cursor a una mano al pasar sobre el botón */
+  }
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+ 
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #072a77;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .contenedor-header header nav ul {
+        display: none; /* Ocultar menú inicialmente en pantallas pequeñas */
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .contenedor-header header nav ul.active {
+        display: flex; /* Mostrar menú cuando esté activo */
+    }
+
+    .contenedor-header header nav ul li {
+        margin: 10px 0;
+    }
+
+    .contenedor-header header nav ul li a {
+        color: var(--text-color);
+        margin: 0;
+        padding: 3px;
+        transition: .5s;
+        text-decoration: none;
+    }
+
+    .sobremi .fila {
+        flex-direction: column;
+    }
+
+    h3 {
+        font-size: 60px;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
+
+    .nav-responsive {
+        display: block; /* Mostrar menú hamburguesa en pantallas pequeñas */
+        cursor: pointer;
+    }
+
+
+}
+
