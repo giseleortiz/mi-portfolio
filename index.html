@@ -53,7 +53,7 @@
                 <div class="redes">
                     <a href="#"><i class="fa-brands fa-github"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+               
                    
                 </div>
                  <a href="img/cv/GiseleOrtiz.pdf" class="download-button" download>
@@ -77,19 +77,22 @@
             <h2>Sobre Mí</h2>
             <p>Soy una persona comunicativa, responsable y curiosa, con una pasión por aprender y crecer tanto personal como profesionalmente. Tengo habilidades para colaborar en equipos multidisciplinarios, establecer relaciones sólidas y abordar desafíos con creatividad y proactividad gracias a mi curiosidad innata.
                 Actualmente busco orientar mi perfil profesional a oportunidades laborales relacionadas a desarrollo de software, en línea con mi formación.</p>
-                <section id="habili" class="habili">
-                <div class="habili2">
-                    <h2>Habilidades</h2>
-                    <ul>
-                        <li>Resolución de problemas</li>
-                        <li>Aptitud positiva</li>
-                        <li>Aprendizaje rápido</li>
-                        <li>Empática</li>
-                        <li>Resiliente</li>
-                    </ul>
-                </div>
-            
-    </section>
+              
+</section >
+<section class="habili3">
+<section id="habili" class="habili">
+    <h2 class="habilih2"> Habilidades</h2>
+    <div class="habili2">
+      
+        <ul>
+            <li>Resolución de problemas</li>
+            <li>Aptitud positiva</li>
+            <li>Aprendizaje rápido</li>
+            <li>Empática</li>
+            <li>Resiliente</li>
+        </ul>
+    </div>
+</section>
 </section>
     <!-- SECCION SKILLS -->
     <section id="skills" class="skills-tools">
@@ -126,7 +129,7 @@
                             <p>Agile Explorer</p>
                         </div>
                         <div class="card-back">
-                            <p>Esta credencial certifica que tengo una comprensión fundamental de los valores, principios y prácticas ágiles. Puedo iniciar conversaciones sobre agilidad con mi equipo y aplicar métodos ágiles en entornos familiares, académicos o laborales.</p>
+                            <p>Esta credencial certifica que tengo una comprensión fundamental de los valores, principios y prácticas ágiles. </p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +140,7 @@
                             <p>Explore Emerging Tech</p>
                         </div>
                         <div class="card-back">
-                            <p>Esta credencial certifica que conozco seis tecnologías emergentes clave y cómo se aplican para resolver problemas en organizaciones. Estoy preparado para explorar carreras en tecnología.</p>
+                            <p>Esta credencial certifica que conozco seis tecnologías emergentes clave y cómo se aplican para resolver problemas en organizaciones.</p>
                         </div>
                     </div>
                 </div>
@@ -148,17 +151,14 @@
                             <p>Introducción a la ciberseguridad</p>
                         </div>
                         <div class="card-back">
-                            <p>Esta credencial certifica que tengo conocimientos introductorios en ciberseguridad, incluyendo la comprensión de ciberamenazas, vulnerabilidades y defensa de amenazas. También conozco el crecimiento de la profesión y las oportunidades de certificación en el campo.</p>
+                            <p>Esta credencial certifica que tengo conocimientos introductorios en ciberseguridad, incluyendo la comprensión de ciberamenazas, vulnerabilidades y defensa de amenazas. </p>
                     </div>
                 </div>
                  
         
        
             </div>
-            <a href="img/cv/TrabajoIntegrador.pdf" class="download2-button" download>
-                Proyectos de testing <i class="fa-solid fa-download"></i>
-                <span class="overlay"></span>
-            </a>
+          
                   
        
 </section>
@@ -260,49 +260,62 @@
     
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h3>Portfolio</h2>
+            <h2 class="portfolio-heading">Portfolio</h2>
             <div class="videos">
                 <div class="video-item">
-                    <video id="video1" width="320">
+                    <video id="video1" width="320"autoplay loop muted>
+                        <div class="controls">
+                            <button class="view-more" onclick="openModal('modal1')">Ver Más</button>
+                        </div>
                         <source src="img/video/Diseño sin título.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
+                       
                     </video>
+                    
+                    <p class="description">
+                    </p>
                     <div class="controls">
-                        <button class="play" onclick="playVideo('video1')">Play</button>
-                        <button class="stop" onclick="stopVideo('video1')">Stop</button>
-                        <button class="view-more" onclick="openModal('modal1')">Ver Más</button>
-                    </div>
-                    <p class="description">Desarrollo E-Commerce "ONE TO ONE"
-                        Proyecto integrador para Digital House</p>
-                   
-                </div>
-                <div class="video-item">
-                    <video id="video2" width="320">
-                        <source src="img/video/Diseño sin título.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                    <div class="controls">
-                        <button class="play" onclick="playVideo('video2')">Play</button>
-                        <button class="stop" onclick="stopVideo('video2')">Stop</button>
-                        <button class="view-more" onclick="openModal('modal2')">Ver Más</button>
-                    </div>
-                    <p class="description">Descripción del proyecto 2</p>
-                </div>
-                <div class="video-item">
-                    <video id="video3" width="320">
-                        <source src="img/video/masajes.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                    <div class="controls">
-                        <button class="play" onclick="playVideo('video3')">Play</button>
-                        <button class="stop" onclick="stopVideo('video3')">Stop</button>
+                      
                         <button class="view-more" onclick="openModal('modal3')">Ver Más</button>
                     </div>
-                    <p class="description">Proyecto personal pagina de Masajes </p>
+
+                    <p class="description"> </p>
+                
                    <a href="https://amor-propio.netlify.app/" class="boton-estilizado">
-        VER
+        LINK
         <i class="fas fa-eye"></i>
     </a>
+                </div>
+             
+                <div class="video-item">
+                    <video id="video3" width="320"autoplay loop muted>
+                        <source src="img/video/masajes.mp4" type="video/mp4">
+                   
+                    </video>
+                    <div class="controls">
+                      
+                        <button class="view-more" onclick="openModal('modal3')">Ver Más</button>
+                  
+                    <p class="description"> </p>
+                   <a href="https://amor-propio.netlify.app/" class="boton-estilizado">
+        LINK
+        <i class="fas fa-eye"></i>
+    </a>
+</div>
+                </div>
+           
+            <div class="videos">
+                <div class="video-item">
+                    <video id="video1" width="320" autoplay loop muted>
+                        <source src="img/video/test.mp4" type="video/mp4">
+                       
+                    </video>
+                   
+                    
+                    <a href="img/cv/TrabajoIntegrador.pdf" class="download2-button" download>
+                        <strong>Proyectos de test</strong>  <i class="fa-solid fa-download"></i>
+                        <span class="overlay"></span>
+                    </a>
+                          
                 </div>
             </div>
         </div>
@@ -365,37 +378,7 @@
         </div>
     </div>
     
-    <script>
-    // Funciones para controlar los videos
-    function playVideo(id) {
-        document.getElementById(id).play();
-    }
-    
-    function stopVideo(id) {
-        var video = document.getElementById(id);
-        video.pause();
-        video.currentTime = 0;
-    }
-    
-    // Funciones para manejar los modales
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-    
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
-    }
-    
-    // Cerrar el modal si se hace clic fuera del contenido
-    window.onclick = function(event) {
-        var modals = document.getElementsByClassName('modal');
-        for (var i = 0; i < modals.length; i++) {
-            if (event.target == modals[i]) {
-                modals[i].style.display = "none";
-            }
-        }
-    }
-    </script>
+  
 
 
 
@@ -440,37 +423,7 @@
     </div>
 </div>
 
-<script>
-// Funciones para controlar los videos
-function playVideo(id) {
-    document.getElementById(id).play();
-}
 
-function stopVideo(id) {
-    var video = document.getElementById(id);
-    video.pause();
-    video.currentTime = 0;
-}
-
-// Funciones para manejar los modales
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
-
-// Cerrar el modal si se hace clic fuera del contenido
-window.onclick = function(event) {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-            modals[i].style.display = "none";
-        }
-    }
-}
-</script>
     <!-- SECCION CONTACTO -->
 
    

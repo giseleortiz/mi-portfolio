@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
 * {
+    
+
     box-sizing: border-box;
     font-family: 'Work Sans';
     margin: 0;
@@ -251,104 +253,31 @@ h4 {
     margin: auto;
 }
 .sobremi h2{
-    font-size: 48px;
+display: flex;
+    font-size: 25px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    margin-left: 45%;
 
-}
-.sobremi .contenido-seccion p{
-    font: 18px;
-    line-height: 22px;
-    margin-bottom: 20px;
-}
-.sobremi .contenido-seccion p span{
-    color: hsl(0, 0%, 98%);
-    font-weight: bold;
-}
-.sobremi .fila{
-    display: flex;
-}
-.sobremi .fila .col
-{
-    width: 50%;
-}
-.sobremi .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
-}
-.sobremi .fila .col ul{
-    list-style: none;
-}
-.sobremi .fila .col ul li{
-    margin: 12px 0;
-}
-.sobremi .fila .col ul li strong{
-    display: inline-block;
-    color: hsla(240, 100%, 100%, 0.904);
-    width: 130px;
-}
-.sobremi .fila .col ul li span{
-    background-color: #0821579d;
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-.sobremi .fila .col .contenedor-intereses{
-    display: flex;
-    flex-wrap: wrap;
-}
-.sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #072a77;
-    border-radius: 10px;
-    margin: 0 15px 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #072a77;
-}
-.sobremi .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-.sobremi button{
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
-    font-size: 16px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-.sobremi button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color:  #072a77;
-    z-index: -1;
-    transition: 1s;
-}
-.sobremi button:hover .overlay{
-    width: 100%;
 }
 
 
 /*habilidades*/
-.habili2 {
+.habili ,
+.habili3
+{
     background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
     url(img/7.jpg);
+    background-color:  #041946f5;
+    color: hwb(75 96% 1% / 0.986);
+    padding: 50px 20px;
+}
+.habili
+{
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
+    url(img/7.jpg);
+    background-color:  #041946f5;
     background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
     color: #fff;
     padding: 20px;
@@ -359,27 +288,32 @@ h4 {
     margin: auto; /* Centrar horizontalmente */
     text-align: center; /* Centrar el texto */
 }
-
-.habili2 h2 {
+.habilih2{
     border-bottom: 2px solid #00aaff;
     padding-bottom: 10px;
     color: hsl(180, 20%, 99%);
+         text-align: left;
+}
+.habilih2 {
+margin-left: 40%;
+color: hsl(180, 20%, 99%);
+
 }
 
-.habili2 ul {
+.habili ul {
     list-style-type: none; /* Quitar los puntos de la lista */
     padding-left: 0; /* Eliminar el padding del lado izquierdo */
     text-align: center; /* Centrar los elementos de la lista */
 }
 
-.habili2 li {
+.habili li {
     color: #00aaff; /* Cambiar el color del texto a azul */
     margin-bottom: 10px; /* Añadir un margen entre los elementos */
     cursor: pointer; /* Cambiar el cursor al pasar sobre los elementos */
     transition: color 0.3s ease; /* Animación suave al cambiar de color */
 }
 
-.habili2 li:hover {
+.habili li:hover {
     color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
 }
 
@@ -518,13 +452,6 @@ h2{
     margin-bottom: 10px;
 }
 
-
-.portfolio {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    
-}
 
 .slider {
     display: flex;
@@ -880,19 +807,20 @@ h2{
 
 
 /* SECCION PORTFOLIO */
-.view-more {
-    background-color: #2196F3; /* Azul */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 14px;
-}
 
-.view-more:hover {
-    background-color: #0b7dda;
+
+
+.portfolio-heading {
+
+    display:contents ;
+    text-align: center;
+  margin-top: 50px;
+    padding: 20px 0;
+  font-size: 45px;
+ color: hsl(315, 20%, 96%);
+
 }
+/*PORFOLIO VIDEOS*/
 .portfolio {
     background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
     url(img/7.jpg);
@@ -902,97 +830,24 @@ h2{
     text-align: center;
 }
 
-/* Estilo del contenido de la sección */
-.contenido-seccion h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
 
-/* Estilo de los videos en horizontal */
+
 .videos {
     display: flex;
+    flex-direction: row; /* Mantiene los videos en una sola fila */
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    gap: 20px; /* Espacio entre videos */
+    overflow-x: auto;
 
-/* Estilo de cada video item */
+}
 .video-item {
     position: relative;
-    width: 320px;
-    margin-bottom: 20px;
+    width: 320px; /* Ancho fijo para los videos */
+    flex-shrink: 0; /* Evita que los videos se reduzcan de tamaño */
 }
 
-/* Estilo de los botones de control del video */
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
-}
 
-/* Estilo de los botones de control */
-.play, .stop {
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
 
-.play {
-    background-color: #4CAF50; /* Verde */
-    color: #fff;
-}
-
-.stop {
-    background-color: #f44336; /* Rojo */
-    color: #fff;
-}
-
-/* Estilo de los modales */
-.modal {
-    display: none; /* Ocultos por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Estilo de la descripción de cada video */
-.description {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* Estilo de la sección de contacto */
 
 /* SECCION CONTACTO */
 .contacto{
@@ -1144,37 +999,17 @@ h2{
     transform: translate(-50%, -50%) scale(1);
 }
 
-/*BOTON DE LINCK*/
+/*BOTON DE LINCK-ver mas*/
 
-.corazon-boton {
+.boton-estilizado ,
+.view-more   {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 120px;
-    height: 100px;
-    background-color: red; /* Color del corazón */
-    border-radius: 50px 50px 0 0; /* Hace las esquinas redondeadas para el corazón */
-    transform: rotate(-45deg); /* Rotamos para crear la forma de corazón */
-    margin: 50px;
-    cursor: pointer;
-    text-decoration: none; /* Elimina subrayado del enlace */
-    color: white; /* Color del texto */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.2;
-}
-
-/* Estilos para la parte inferior del corazón */
-.boton-estilizado {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #007BFF; 
+    background: linear-gradient(145deg, #021235, #0c4396);
     color: white; 
     text-decoration: none; 
-    padding: 10px 20px; 
+    padding: 10px 10px; 
     border-radius: 5px; 
     font-size: 10px;
     font-family: Arial, sans-serif;
@@ -1188,14 +1023,23 @@ h2{
     font-size: 10px;
 }
 
-
-.boton-estilizado:hover {
+.boton-estilizado:hover,
+ .view-more:hover
+{
     background-color: #0056b3; 
     border-color: #0056b3; 
     transform: scale(1.05); 
 }
+.view-more  {
+    margin-left:50% ; 
 
-
+   
+}
+.boton-estilizado  {
+    position:relative;
+    top: -35px; 
+    margin-left:-50% ; 
+}
 
 
 /*BONTON WASAPP*/
