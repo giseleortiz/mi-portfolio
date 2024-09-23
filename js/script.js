@@ -138,3 +138,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     window.location.href = `mailto:giseleortizuriel@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+

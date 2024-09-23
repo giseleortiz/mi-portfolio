@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
 * {
-    
-
+ 
     box-sizing: border-box;
     font-family: 'Work Sans';
     margin: 0;
@@ -27,6 +26,57 @@ h3 {
 h4 {
     font-size: 50px;
 }
+/*animacion*/
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* Animación de la escritura */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  /* Animación del cursor parpadeante */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+
+.typing {
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid black; /* Simula el cursor */
+    width: 0;
+    max-width: 100%;
+    animation: typing 5s steps(40) forwards, blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(0, 0, 0, 0); }
+  }
+
+  .zoom-in {
+    transform: scale(0);
+    animation: zoomIn 5s forwards;
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
 
 /* MENU */
 
@@ -252,26 +302,29 @@ h4 {
     max-width: 1100px;
     margin: auto;
 }
-.sobremi h2{
+.zoom-in, h2{
 display: flex;
     font-size: 25px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-    margin-left: 45%;
+    margin-left: 5%;
 
 }
+.fade-in{
+    margin-left: 5%;
+    
+    }
 
 
 /*habilidades*/
-.habili ,
-.habili3
-{
+.habili{
     background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
     url(img/7.jpg);
     background-color:  #041946f5;
     color: hwb(75 96% 1% / 0.986);
     padding: 50px 20px;
+
 }
 .habili
 {
@@ -284,20 +337,22 @@ display: flex;
     border: 1px solid #00aaff; /* Borde azul */
     border-radius: 10px; /* Esquinas redondeadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para dar profundidad */
-    max-width: 600px; /* Ancho máximo del rectángulo */
-    margin: auto; /* Centrar horizontalmente */
-    text-align: center; /* Centrar el texto */
+    max-width: 450px; /* Ancho máximo del rectángulo */
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+  
 }
-.habilih2{
-    border-bottom: 2px solid #00aaff;
-    padding-bottom: 10px;
-    color: hsl(180, 20%, 99%);
-         text-align: left;
-}
+
 .habilih2 {
-margin-left: 40%;
+position: relative;
+left: 32%;
 color: hsl(180, 20%, 99%);
 
+}
+
+.habili li:hover {
+    color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
 }
 
 .habili ul {
@@ -318,176 +373,142 @@ color: hsl(180, 20%, 99%);
 }
 
 
+
+
 /* SECCION S K I L L S */
 .skills-tools ul {
     list-style-type: none; /* Quitar los puntos de la lista */
     padding-left: 0; /* Eliminar el padding del lado izquierdo */
-    text-align: center; /* Centrar los elementos de la lista */
+    display: grid; /* Utilizar grid para dividir en columnas */
+    grid-template-columns: repeat(7, 5fr); /* Cuatro columnas de igual tamaño */
+    gap: 30px; /* Espacio entre los elementos de la lista */
+    justify-content: center; /* Centrar la lista de herramientas */
+    text-align: left; /* Alinear el texto de las herramientas a la izquierda */
+    margin-left: 0; /* Eliminar margen innecesario */
 }
 
-.skills-tools li {
-    color: #00aaff; /* Cambiar el color del texto a azul */
+/* Elementos de la lista de herramientas */
+.skills-tools ul li {
+    width: 300%; /* Asegura que cada elemento de lista ocupe su columna completa */
+    color: #00aaff; /* Color azul para el texto */
     margin-bottom: 10px; /* Añadir un margen entre los elementos */
     cursor: pointer; /* Cambiar el cursor al pasar sobre los elementos */
     transition: color 0.3s ease; /* Animación suave al cambiar de color */
+    text-align: left; /* Alinear el texto dentro de cada columna */
+    padding-left:5px ;
 }
-.skills h2, .tools h2 {
-    border-bottom: 2px solid #00aaff;
-    padding-bottom: 10px;
-  
+
+/* Efecto hover en las herramientas */
+.skills-tools ul li:hover {
+    color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
     
 }
-.skills-tools li:hover {
-    color: hsl(18, 100%, 97%); /* Cambiar el color al pasar el cursor */
-}
-.skills{
-    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
-    url(img/7.jpg);
-    background-color:   #072a77;
 
-    color: #fff;
-    padding: 50px 20px;
+.tools {
+max-width: 700px; /* Ancho máximo del rectángulo */
+background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
+ padding: 55px;
+border: 1px solid #00aaff;
+border-radius: 10px;
+margin-left: 35%;
+margin-top: 10%;
 }
+
 .skills-tools {
-    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
-    url(img/7.jpg);
-    background-color:   #072a77;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: rgba(26, 26, 26, 0.8); /* Fondo semi-transparente */
-    gap: 20px; 
-}
-
-.skills, .tools {
-    width: 40%;
-    background-color: rgba(10, 10, 10, 0.8); /* Fondo semi-transparente */
-    padding: 20px;
-    border: 1px solid #00aaff;
-    border-radius: 10px;
-}
-
-.skills h2, .tools h2 {
-  
-    border-bottom: 2px solid #00aaff;
-    padding-bottom: 10px;
-    color: #f6fcff;
-    display: flex;
-    align-items: center;
-}
-.tools{  background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
-    url(img/7.jpg);
-    background-color:   #072a77;
-    color: #fff;
-    padding: 50px 20px;
-
-}
-
-/*CREDENCUIALES*/
-.creden {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-h2{
-    display: flex;
-    align-items: column;
-}  
-.creden-container {
-    display: flex;
-    flex-direction:center;
+    background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)), url(img/7.jpg);
+    background-color: #072a77;
+     display: flex; 
     justify-content: center;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8); /* Fondo semi-transparente */ 
     gap: 20px;
-}
+    }
 
-.card {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px; /* Esto ayuda a crear el efecto 3D */
-}
+/*CREDENCIALES*/
 
-.card-inner {
+.herra-h2{
+    display: flex;
+    color:white;
+    display: flex;
+    text-align: center;
     position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+    left:30%; 
+    font-size:24px; 
+    margin-top: 5px;
+}  
+
+/**/
+#openModalBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.card:hover .card-inner {
-    transform: rotateY(180deg);
+#openModalBtn:hover {
+    background-color: #45a049;
 }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-    background-color: rgba(0, 0, 0, 0.5);  /* Color de fondo para la parte delantera */
-    color: #fff;
-}
-
-.card-back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #01062286; /* Color de fondo para la parte trasera */
-    color: #fff;
-    transform: rotateY(180deg);
-}
-
-.card img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
-.slider {
-    display: flex;
-    width: 100%;
-    animation: slide 12s infinite;
-}
-
-.slide {
-    width: 100%;
-    position: relative;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: rgb(12, 12, 12);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
     text-align: center;
 }
 
+.close {
+    color: #096beb;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the images inside the modal */
+.modal-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.card img {
+    max-width: 150px;
+    border-radius: 10px;
+}
+/**/
 
 .modern-button {
     display: inline-block;
     padding: 14px 28px;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
+    color: #2a28b8;
     background: linear-gradient(45deg, #053058, #062acc7a);
     border: none;
     border-radius: 50px;
@@ -695,6 +716,15 @@ h2{
     100%{width: 94%;}
 }
 /* SECCION CURRICULUM */
+
+
+  /* Animación */
+  @keyframes electric {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: -100%; }
+  }
+
 .curriculum{
     background: linear-gradient(to top, rgba(2, 35, 54, 0.288), rgba(31, 37, 90, 0.24)),
     url(img/7.jpg);
@@ -803,13 +833,7 @@ h2{
     position: relative;
     bottom: 4px;
 }
-
-
-
 /* SECCION PORTFOLIO */
-
-
-
 .portfolio-heading {
 
     display:contents ;
