@@ -92,23 +92,7 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
 
-// Cerrar el modal si se hace clic fuera del contenido
-window.onclick = function(event) {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-            modals[i].style.display = "none";
-        }
-    }
-}
-window.onclick = function(event) {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-            modals[i].style.display = "none";
-        }
-    }
-};
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -138,4 +122,10 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     window.location.href = `mailto:giseleortizuriel@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav").querySelector("ul");
+    const navResponsive = document.querySelector(".nav-responsive");
 
+    nav.classList.toggle("show"); // Alterna la clase 'show'
+    navResponsive.classList.toggle("open"); // Alterna la clase 'open'
+}

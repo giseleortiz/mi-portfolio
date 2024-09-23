@@ -1,0 +1,1 @@
+iniciando mi poptfolio, con futuros cambios en desarrollo con instalacioines pendientes .

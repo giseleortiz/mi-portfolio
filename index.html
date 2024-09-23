@@ -28,12 +28,15 @@
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MÍ</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRÍCULUM</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -57,8 +60,8 @@
                 <p><strong>Cuidad: Buenos Aires.</strong></p>
                 <p><strong>Fechas de Nacimiento: 18/06/1984.</strong></p>
                 <div class="redes">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/giseleortiz"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gisele-ortiz-b0a833197"><i class="fa-brands fa-linkedin-in"></i></a>
                
                    
                 </div>
@@ -216,13 +219,36 @@
     </div>
     
 </section>
+<section id="skills" class="skills-tools">
+    <div class="tools">
+        <h2 class="herra-h2">Herramientas</h2>
+        <ul>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fab fa-react"></i> React</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fab fa-node"></i> Node.js</li>
+            <li><i class="fas fa-server"></i> Express</li>
+         <li><i class="fas fa-network-wired"></i> REST</li>
+         <li><i class="fab fa-github"></i> GitHub</li>
+            <li><i class="fab fa-git"></i> Git</li>
+            
+            <li><i class="fab fa-trello"></i> Trello</li>
+            <li><i class="fas fa-tasks"></i> JIRA</li>
+            <li><i class="fas fa-check-square"></i> Testlink</li>
+            <li><i class="fas fa-bug"></i> Mantis</li>
+        </ul>
+    </div>
+    
 
+</section>
  
     <!-- SECCION PORTFOLIO -->
     
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2 class="portfolio-heading">Portfolio</h2>
+            <h2 class="portfolio-h2">Portfolio</h2>
             <div class="videos">
                 <div class="video-item">
                     <video id="video1" width="320"autoplay loop muted>
@@ -283,30 +309,7 @@
         </div>
     </section>
 </section>
-<section id="skills" class="skills-tools">
-    <div class="tools">
-        <h2 class="herra-h2">Herramientas</h2>
-        <ul>
-            <li><i class="fab fa-js"></i> JavaScript</li>
-            <li><i class="fab fa-html5"></i> HTML</li>
-            <li><i class="fab fa-css3-alt"></i> CSS</li>
-            <li><i class="fab fa-react"></i> React</li>
-            <li><i class="fas fa-database"></i> MySQL</li>
-            <li><i class="fab fa-node"></i> Node.js</li>
-            <li><i class="fas fa-server"></i> Express</li>
-         <li><i class="fas fa-network-wired"></i> REST</li>
-         <li><i class="fab fa-github"></i> GitHub</li>
-            <li><i class="fab fa-git"></i> Git</li>
-            
-            <li><i class="fab fa-trello"></i> Trello</li>
-            <li><i class="fas fa-tasks"></i> JIRA</li>
-            <li><i class="fas fa-check-square"></i> Testlink</li>
-            <li><i class="fas fa-bug"></i> Mantis</li>
-        </ul>
-    </div>
-    
 
-</section>
     <!-- Modales -->
     <div id="modal1" class="modal">
         <div class="modal-content">
@@ -412,7 +415,9 @@
     <!-- SECCION CONTACTO -->
 
     <title>Formulario de Contacto</title>
+
     <section id="contacto" class="contacto">
+        <h2 class="herra-h2">Contacto</h2>
     <div class="contact-form">
         <form id="form">
             <div class="field">
