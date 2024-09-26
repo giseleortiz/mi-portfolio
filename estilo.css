@@ -493,7 +493,7 @@ margin-top: 5%;
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(199, 135, 135);
     text-decoration: none;
     cursor: pointer;
 }
@@ -510,14 +510,34 @@ margin-top: 5%;
     max-width: 150px;
     border-radius: 10px;
 }
-/**/
+/*MODAL*/
+.modal-content .tech-list {
+    list-style: none;
+    padding-left: 0;
+}
 
+.modal-content .tech-list li {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Estilos para los íconos */
+.modal-content .tech-list li i {
+    margin-right: 5px;
+    color: #0534cf; /* Cambia este color según lo que prefieras */
+}
+
+/*modal*/
 .modern-button {
     display: inline-block;
     padding: 14px 28px;
     font-size: 18px;
     font-weight: bold;
-    color: #2a28b8;
+    color: #f0f0f5;
     background: linear-gradient(45deg, #053058, #062acc7a);
     border: none;
     border-radius: 50px;
@@ -526,6 +546,7 @@ margin-top: 5%;
     position: relative;
     transition: all 0.3s ease;
     overflow: hidden;
+  
 }
 
 .modern-button:hover {
@@ -542,6 +563,7 @@ margin-top: 5%;
 
 .modern-button i {
     margin-left: 10px;
+  
 }
 
 .overlay {
@@ -990,7 +1012,7 @@ margin-left: 45%;
 }
 
 #button::before {
-  /* Código de FontAwesome para el icono de la carta */
+  
     font-family: 'FontAwesome';
     font-size: 18px;
     margin-right: 10px;
@@ -1068,7 +1090,7 @@ margin-left: 45%;
 }
 .boton-estilizado  {
     position:relative;
-    top: -35px; 
+    top: -40px; 
     margin-left:-50% ; 
 }
 
@@ -1165,20 +1187,8 @@ footer .arriba{
     border-radius: 8px;
 }
 
-/* Estilo para el botón de cierre */
-.close {
-    color: hsl(0, 93%, 49%);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-    color: rgb(247, 244, 244);
-    text-decoration: none;
-    cursor: pointer;
-}
+/* Estilo para el botón de cierre */
 
 /* Estilo para los botones */
 button {

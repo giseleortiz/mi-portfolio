@@ -26,7 +26,7 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href= onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MÍ</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRÍCULUM</a></li>
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
@@ -199,7 +199,7 @@
         </div>
     </div>
     <div class="creden-container">
-        <button id="openModalBtn"> credenciales</button>
+        <button id="openModalBtn" > <strong>Credenciales</strong></button>
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -263,7 +263,7 @@
                     </p>
                     <div class="controls">
                       
-                        <button class="view-more" onclick="openModal('modal3')">Ver Más</button>
+                        <button class="view-more" onclick="openModal('modal1')">Ver Más</button>
                     </div>
 
                     <p class="description"> </p>
@@ -281,7 +281,7 @@
                     </video>
                     <div class="controls">
                       
-                        <button class="view-more" onclick="openModal('modal3')">Ver Más</button>
+                        <button class="view-more" onclick="openModal('modal2')">Ver Más</button>
                   
                     <p class="description"> </p>
                    <a href="https://amor-propio.netlify.app/" class="boton-estilizado">
@@ -309,109 +309,55 @@
         </div>
     </section>
 </section>
+   
 
-    <!-- Modales -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h4>Desarrollo E-Commerce "ONE TO ONE"</h4>
-            <p><strong>Proyecto integrador para Digital House</strong></p>
-            <p><strong>Fecha:</strong> Agosto 2023 - Abril 2024</p>
-            <p>En este proyecto, he desarrollado una aplicación e-commerce integral, <strong>ONE TO ONE</strong>, como parte de mi formación en Digital House. El proyecto cubrió desde el diseño inicial hasta la implementación de la funcionalidad completa, utilizando un stack tecnológico avanzado.</p>
-            <p><strong>Tecnologías Aplicadas:</strong></p>
-            <ul>
-                <li><strong>JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
-                <li><strong>Node.js:</strong> En el backend para manejar la lógica del servidor y las operaciones asíncronas.</li>
-                <li><strong>Express:</strong> Framework para construir y gestionar el servidor de manera eficiente.</li>
-                <li><strong>HTML & CSS:</strong> Para el diseño y maquetado del front-end, garantizando una interfaz atractiva y funcional.</li>
-                <li><strong>MySQL (Sequelize):</strong> Para la gestión y manipulación de la base de datos relacional.</li>
-                <li><strong>React:</strong> Biblioteca para construir interfaces de usuario dinámicas y responsivas.</li>
-                <li><strong>REST:</strong> Para el diseño de la arquitectura de la API, facilitando la comunicación entre el frontend y el backend.</li>
-                <li><strong>MVC:</strong> Patrón de diseño para separar las preocupaciones y estructurar la aplicación.</li>
-                <li><strong>Git & GitHub:</strong> Para el control de versiones y colaboración en el código fuente.</li>
-                <li><strong>Jira:</strong> Herramienta para la gestión de proyectos y seguimiento de tareas.</li>
-            </ul>
-            <p>Este proyecto ha sido una experiencia valiosa que ha permitido aplicar y consolidar habilidades en desarrollo web, desde la creación de interfaces hasta la implementación de funcionalidades complejas.</p>
-        </div>
-    </div>
-    
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h3>Descripción del proyecto 2</h3>
-            <p>Aquí va la descripción del proyecto 2.</p>
-        </div>
-    </div>
-    
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-          
-             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h4>Desarrollo E-Commerce "AMOR PROPIO"</h4>
-            <p><strong>Proyecto Pesonal</strong></p>
-            <p><strong>Fecha:</strong> Agosto 2024 - al Presente</p>
-            <p>En este proyecto, he desarrollado una aplicación e-commerce integral,<strong>Amor -Propio</strong>, como parte de mi formación en Digital House. El proyecto cubrió desde el diseño inicial hasta la implementación de la funcionalidad completa, utilizando un stack tecnológico avanzado.</p>
-            <p><strong>Tecnologías Aplicadas:</strong></p>
-            <ul>
-             <li><strong>JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
-             <li><strong>HTML & CSS:</strong> Para el diseño y maquetado del front-end, garantizando una interfaz atractiva y funcional.</li>
-                <li><strong>JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
-                <li><strong>ESTA DESARROLO</strong> Base de datos</li>
-                  <li><strong>Carrito de compras</strong> </li>
-                   <li><strong>Agenda de turnos</strong> </li>
-                   <li><strong>Contacto con el servicio</strong></li>
-
-                 <li><strong>ESTA EN DESARROLO</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
-            </ul>
-            <p>Este proyecto ha sido una experiencia valiosa que ha permitido aplicar y consolidar habilidades en desarrollo web, desde la creación de interfaces hasta la implementación de funcionalidades complejas.</p>
-        </div>
-    </div>
-    
-  
-
-
-
+   
 <!-- Modales -->
 <div id="modal1" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h5>Desarrollo E-Commerce "ONE TO ONE"</h5>
+        <h4>Desarrollo E-Commerce "ONE TO ONE"</h5>
         <p><strong>Proyecto integrador para Digital House</strong></p>
         <p><strong>Fecha:</strong> Agosto 2023 - Abril 2024</p>
-        <p>En este proyecto, he desarrollado una aplicación e-commerce integral, <strong>ONE TO ONE</strong>, como parte de mi formación en Digital House. El proyecto cubrió desde el diseño inicial hasta la implementación de la funcionalidad completa, utilizando un stack tecnológico avanzado.</p>
+        <p>En este proyecto, he desarrollado una aplicación e-commerce integral, <strong>ONE TO ONE</strong>, como parte de mi formación en Digital House. </p>
         <p><strong>Tecnologías Aplicadas:</strong></p>
-        <ul>
-            <li><strong>JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
-            <li><strong>Node.js:</strong> En el backend para manejar la lógica del servidor y las operaciones asíncronas.</li>
-            <li><strong>Express:</strong> Framework para construir y gestionar el servidor de manera eficiente.</li>
-            <li><strong>HTML & CSS:</strong> Para el diseño y maquetado del front-end, garantizando una interfaz atractiva y funcional.</li>
-            <li><strong>MySQL (Sequelize):</strong> Para la gestión y manipulación de la base de datos relacional.</li>
-            <li><strong>React:</strong> Biblioteca para construir interfaces de usuario dinámicas y responsivas.</li>
-            <li><strong>REST:</strong> Para el diseño de la arquitectura de la API, facilitando la comunicación entre el frontend y el backend.</li>
-            <li><strong>MVC:</strong> Patrón de diseño para separar las preocupaciones y estructurar la aplicación.</li>
-            <li><strong>Git & GitHub:</strong> Para el control de versiones y colaboración en el código fuente.</li>
-            <li><strong>Jira:</strong> Herramienta para la gestión de proyectos y seguimiento de tareas.</li>
+
+        <ul class="tech-list">
+            <li><i class="fab fa-js-square"></i> <strong>JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
+            <li><i class="fab fa-node-js"></i> <strong>Node.js:</strong> En el backend para manejar la lógica del servidor y las operaciones asíncronas.</li>
+            <li><i class="fas fa-server"></i> <strong>Express:</strong> Framework para construir y gestionar el servidor de manera eficiente.</li>
+            <li><i class="fab fa-html5"></i> <strong>HTML & CSS:</strong> Para el diseño y maquetado del front-end, garantizando una interfaz atractiva y funcional.</li>
+            <li><i class="fas fa-database"></i> <strong>MySQL (Sequelize):</strong> Para la gestión y manipulación de la base de datos relacional.</li>
+            <li><i class="fab fa-react"></i> <strong>React:</strong> Biblioteca para construir interfaces de usuario dinámicas y responsivas.</li>
+            <li><i class="fas fa-cogs"></i> <strong>REST:</strong> Para el diseño de la arquitectura de la API, facilitando la comunicación entre el frontend y el backend.</li>
+            <li><i class="fas fa-project-diagram"></i> <strong>MVC:</strong> Patrón de diseño para separar las preocupaciones y estructurar la aplicación.</li>
+            <li><i class="fab fa-git-alt"></i> <strong>Git & GitHub:</strong> Para el control de versiones y colaboración en el código fuente.</li>
+            <li><i class="fab fa-jira"></i> <strong>Jira:</strong> Herramienta para la gestión de proyectos y seguimiento de tareas.</li>
+        </ul>
+     
+    </div>
+</div>
+ 
+<div id="modal2" class="modal">
+    <div class="modal-content">
+         <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h4>Desarrollo E-Commerce "AMOR PROPIO"</h4>
+        <p><strong>Proyecto Pesonal</strong></p>
+        <p><strong>Fecha:</strong> Agosto 2024 - al Presente</p>
+        <p>En este proyecto, he desarrollado una aplicación e-commerce integral,<strong>Amor -Propio</strong>, como parte de mi formación en Digital House. El proyecto cubrió desde el diseño inicial hasta la implementación de la funcionalidad completa, utilizando un stack tecnológico avanzado.</p>
+        <p><strong>Tecnologías Aplicadas:</strong></p>
+        <ul class="tech-list">
+            <li><strong><i class="fas fa-code"></i> JavaScript:</strong> Para la lógica de la aplicación y la interacción del usuario.</li>
+            <li><strong><i class="fas fa-paint-brush"></i> HTML & CSS:</strong> Para el diseño y maquetado del front-end, garantizando una interfaz atractiva y funcional.</li>
+            <li><strong><i class="fas fa-database"></i> Base de datos:</strong> Desarrollo en curso.</li>
+            <li><strong><i class="fas fa-shopping-cart"></i> Carrito de compras:</strong></li>
+            <li><strong><i class="fas fa-calendar-alt"></i> Agenda de turnos:</strong></li>
+            <li><strong><i class="fas fa-envelope"></i> Contacto con el servicio:</strong></li>
+            <li><strong><i class="fas fa-code"></i> Lógica de la aplicación:</strong> Desarrollo en curso.</li>
         </ul>
         <p>Este proyecto ha sido una experiencia valiosa que ha permitido aplicar y consolidar habilidades en desarrollo web, desde la creación de interfaces hasta la implementación de funcionalidades complejas.</p>
     </div>
 </div>
-
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h3>Descripción del proyecto 2</h3>
-        <p>Aquí va la descripción del proyecto 2.</p>
-    </div>
-</div>
-
-<div id="modal3" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal3')">&times;</span>
-        <h3>Descripción del proyecto 3</h3>
-        <p>Aquí va la descripción del proyecto 3.</p>
-    </div>
-</div>
-
     <!-- SECCION CONTACTO -->
 
     <title>Formulario de Contacto</title>
